@@ -28,7 +28,59 @@ Hasilnya tetap sama
 
    <img width="481" height="116" alt="image" src="https://github.com/user-attachments/assets/34130082-d9c5-463c-9edd-0743ea0f50f2" />
 
+ Apa keluaran dari program? Jelaskan maksud dari statement tersebut. 
+
    Jawaban :
+
+   Ini adalah perulangan for yang akan berjalan sebnyakan 4x dimulai dari 1=0 sampai 1=3 karena syaratnya i<4, statement tersebut berfungsi menampilkan semua element array bil dari idndeks 0 hingga 3 
+   ```
+    import java.util.Scanner;
+       public class ArrayBilangan13 {
+       public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int[] bil = new int [4];
+        bil [0] = 5;
+        bil [1] = 13;
+        bil [2] = -7;
+        bil [3] = 17;
+
+      for (int i = 0; i < 4; i++) {
+        System.out.println(bil[i]);
+      }
+    }
+}
+
+hasilnya :
+5
+13
+-7
+17
+
+```
+4.	Jika kondisi pada statement for-loop di atas diubah menjadi: i <= 4, apa keluaran dari program? Mengapa demikian?
+
+Jawaban : 
+
+Jika kondisi di ubah menjadi i<=4 maka program akan menghasilkan (ArrayIndexOutOfBoundsException).
+
+Alasannya : Array bil cuma punya dari indeks 0 - 3, tetapi ketika i=4 program mencoba mekakses bil [4] yang tidak ada.
+
+## Percobaan 2 :Studi Kasus Nilai Mahasiswa di SIAKAD - Meminta Inputan Pengguna untuk Mengisi Elemen Array Waktu 
+
+1.	Ubah statement pada langkah nomor 5 menjadi seperti berikut ini:
+
+    <img width="808" height="116" alt="image" src="https://github.com/user-attachments/assets/26c10c7a-dbf0-478e-844a-f61d2e2d0d49" />
+
+ Jalankan program. Apakah terjadi perubahan? Mengapa demikian? 
+
+
+
+
+
+	
+    
+
+
 
    
 
