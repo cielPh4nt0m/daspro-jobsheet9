@@ -384,7 +384,28 @@ Hasilnya :
 
 <img width="325" height="394" alt="image" src="https://github.com/user-attachments/assets/d39482c5-9a0d-4c4c-b82a-d3cb0d488e25" />
 
-2. 
+2. Buat program yang dapat mengelola pemesanan makanan dan minuman di sebuah kafe.Program akan memungkinkan pengguna untuk memasukkan pesanan, menghitung total biaya pesanan, dan menampilkan daftar pesanan yang telah dibuat.
+   
+Input:  
+
+o jumlah pesanan (input dari pengguna). 
+
+o nama makanan/minuman dan harga untuk masing-masing pesanan (input dari pengguna) 
+
+Proses: 
+
+o simpan data pesanan dalam array satu dimensi untuk nama pesanan; dan array satu dimensi terpisah untuk harga. 
+
+
+o hitung total biaya dari semua pesanan yang dimasukkan. 
+
+o tampilkan daftar pesanan yang telah dimasukkan bersama dengan total biaya.
+
+Output:
+
+o daftar pesanan dan total biaya dari semua pesanan.
+
+Jawaban :
 
 
 
