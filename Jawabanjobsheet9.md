@@ -406,6 +406,129 @@ Output:
 o daftar pesanan dan total biaya dari semua pesanan.
 
 Jawaban :
+```
+import java.util.Scanner;
+
+    public class KafeOrder {
+      public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah pesanan: ");
+        int n = in.nextInt();
+        in.nextLine(); 
+
+        String[] nama = new String[n];
+        double[] harga = new double[n];
+        double total = 0;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Pesanan ke-" + (i + 1));
+            System.out.print("Nama makanan/minuman: ");
+            nama[i] = in.nextLine();
+            System.out.print("Harga: ");
+            harga[i] = in.nextDouble();
+            in.nextLine();
+            total += harga[i];
+        }
+
+        System.out.println("\nDaftar Pesanan:");
+        for (int i = 0; i < n; i++) {
+            System.out.println((i + 1) + ". " + nama[i] + " - Rp " + harga[i]);
+        }
+
+        System.out.println("Total Biaya: Rp " + total);
+
+        in.close();
+    }
+}
+```
+3. Masih menggunakan kasus pada pemesanan makanan di kafe, buatlah program yang memungkinkan pengguna untuk memesan makanan dari menu yang tersedia di kafe. Program harus menyimpan daftar nama makanan dalam sebuah array dan memberikan opsi untuk mencari makanan yang diinginkan menggunakan metode linear search.
+   
+-	Input:
+  
+o	daftar menu makanan yang telah ditentukan sebelumnya dalam bentuk array. 
+
+Nama-nama makanan telah di-inisialisasi saat deklarasi array. Misal:  String[] menu = {"Nasi Goreng", "Mie Goreng", "Roti Bakar", "Kentang Goreng", "Teh Tarik", "Cappucino", "Chocolate Ice"}; o nama makanan yang ingin dicari (input dari pengguna). 
+
+
+-	Proses:
+  
+o	program mencari nama makanan yang dimasukkan pengguna menggunakan algoritma linear search.
+
+o	jika makanan ditemukan, program akan menginformasikan pengguna bahwa makanan tersebut tersedia. Jika tidak ditemukan, program akan memberi tahu pengguna bahwa makanan yang dicari tidak ada di menu.
+
+-	Output:
+
+o	Tampilkan hasil pencarian kepada pengguna. 
+
+Jawaban:
+```
+import java.util.Scanner;
+
+public class kafeMenu {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+
+        String[] menu = {
+            "Nasi Goreng", "Mie Goreng", "Roti Bakar",
+            "Kentang Goreng", "Teh Tarik", "Cappucino", "Chocolate Ice"
+        };
+
+        System.out.println("=== Daftar Menu Kafe ===");
+        for (String item : menu) {
+            System.out.println("- " + item);
+        }
+
+        System.out.print("\nMasukkan nama makanan/minuman yang ingin dicari: ");
+        String cari = in.nextLine();
+
+        boolean ditemukan = false;
+        for (int i = 0; i < menu.length; i++) {
+            if (menu[i].equalsIgnoreCase(cari)) {
+                ditemukan = true;
+                break;
+            }
+        }
+
+        if (ditemukan) {
+            System.out.println(cari + " tersedia di menu kafe.");
+        } else {
+            System.out.println(cari + " tidak ditemukan di menu kafe.");
+        }
+
+        if (ditemukan) {
+            System.out.print("\nMasukkan jumlah pesanan: ");
+            int n = in.nextInt();
+            in.nextLine(); // bersihkan buffer
+
+            String[] nama = new String[n];
+            double[] harga = new double[n];
+            double total = 0;
+
+            for (int i = 0; i < n; i++) {
+                System.out.println("\nPesanan ke-" + (i + 1));
+                System.out.print("Nama makanan/minuman: ");
+                nama[i] = in.nextLine();
+                System.out.print("Harga: ");
+                harga[i] = in.nextDouble();
+                in.nextLine();
+                total += harga[i];
+            }
+
+            System.out.println("\n=== Daftar Pesanan Anda ===");
+            for (int i = 0; i < n; i++) {
+                System.out.println((i + 1) + ". " + nama[i] + " - Rp " + harga[i]);
+            }
+            System.out.println("Total Biaya: Rp " + total);
+        }
+
+        in.close();
+    }
+}
+```
+
+
 
 
 
